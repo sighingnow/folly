@@ -246,6 +246,12 @@ struct dynamic::const_value_iterator
 
 //////////////////////////////////////////////////////////////////////
 
+// compatible with the default behaviour of {} as array.
+inline dynamic::dynamic()
+  : dynamic(std::initializer_list<dynamic>{})
+{
+}
+
 inline dynamic::dynamic(ObjectMaker (*)())
   : type_(OBJECT)
 {

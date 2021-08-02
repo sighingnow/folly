@@ -145,6 +145,7 @@ public:
   /*
    * String compatibility constructors.
    */
+  /* implicit */ dynamic();
   /* implicit */ dynamic(StringPiece val);
   /* implicit */ dynamic(char const* val);
   /* implicit */ dynamic(std::string const& val);

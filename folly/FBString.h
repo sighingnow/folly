@@ -1121,6 +1121,10 @@ public:
   }
 #endif
 
+  operator std::string() const {
+    return std::string(data(), size());
+  }
+
   basic_fbstring& operator=(const value_type* s) {
     return assign(s);
   }
